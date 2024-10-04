@@ -145,9 +145,8 @@ void	initialize_outpath(t_outpath *new)
 	new->next = NULL;
 }
 
-void	give_index_redir(t_inpath **inpath, t_outpath **outpath)
+void	give_index_redir(t_inpath **inpath, t_outpath **outpath, int index)
 {
-	static int	index = 0;
 	t_inpath	*current_in;
 	t_outpath	*current_out;
 
@@ -171,6 +170,5 @@ void	give_index_redir(t_inpath **inpath, t_outpath **outpath)
 			current_out = current_out->next;
 		}
 	}
-	index++;
 	return ;
 }

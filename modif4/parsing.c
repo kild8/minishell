@@ -25,11 +25,13 @@ void	parsing(char *input, t_command **command)
 	t_outpath		*outpath;
 	int				length;
 	int				i;
+	int				j;
 
 	temp_cmd = NULL;
 	inpath = NULL;
 	outpath = NULL;
 	i = 0;
+	j = 0;
 
 	//check_open_quotes(input);
 	//check_errors;
@@ -56,12 +58,14 @@ void	parsing(char *input, t_command **command)
 		if (input[i] == '|')
 		{
 			i++;
+			j++;
 			set_pipein(command);
-			give_index_redir(&inpath, &outpath);
+			give_index_redir(&inpath, &outpath, j);
 		}
 	}
 	set_pipeout(command);
 	print_command(command);
+	j = 0;
 }
 
 
