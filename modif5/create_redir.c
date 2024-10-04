@@ -25,7 +25,7 @@ int	create_inpath(char *input, t_inpath **inpath, int index)
 	initialize_inpath(new);
 	filename = copy_redir(input);
 	new->filename = filename;
-	new_>index = index;
+	new->index = index;
 	if (*input == '<' && *(input + 1) == '<')
 		new->heredoc = true;
 	else

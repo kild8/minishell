@@ -151,8 +151,8 @@ int		ft_check_absolute_relative_path(t_command *command);
 
 //create_redir.c
 int		create_redir(char *input, t_inpath **inpath, t_outpath **outpath, int index);
-int		create_inpath(char *input, t_inpath **inpath);
-int		create_outpath(char *input, t_outpath **outpath);
+int		create_inpath(char *input, t_inpath **inpath, int index);
+int		create_outpath(char *input, t_outpath **outpath, int index);
 int		skip_filename_length(char *input);
 int		filename_length(char *input);
 char	 *copy_redir(char *input);
