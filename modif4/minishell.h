@@ -165,7 +165,7 @@ void	create_command_def(char **tb, t_command **command, t_inpath **inpath, t_out
 void	free_temp_command(t_temp_command **command);
 char	**create_tab(int size);
 
-void    give_index_redir(t_inpath **inpath, t_outpath **outpath);
+void    give_index_redir(t_inpath **inpath, t_outpath **outpath, int index);
 int		command_length(char *input);
 int		skip_command_length(char *str);
 char 	*copy_command(char *input);
